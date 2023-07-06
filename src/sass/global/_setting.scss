@@ -1,9 +1,12 @@
 @use "sass:math";
 
+// デザインカンプ
+// sp 375
+// pc 1440
+
 // インナー幅設定
-// コンテンツのインナー幅（最も共通の幅が多い部分）
-$inner: 1100px;
-// ※キュンパス幅ではなくインナーの幅を指す
+$inner: 1080px;
+// インナー幅  = 1440 - 左右の余白 180 * 2 = 1080
 
 // 余白
 $padding-pc: 25px;
@@ -13,12 +16,13 @@ $padding-sp: 20px;
 // フォント設定
 ////////////////////
 
-$base-font-family: "";
-$second-font-family: "";
+$font-noto-sans: 'Noto Sans JP', sans-serif;
+$font-gotu: 'Gotu', sans-serif;
+$font-lato: 'Lato', sans-serif;
 // ※検証ツールでしっかり反映されているか確認する
 
 body {
-  font-family: $base-font-family;
+  font-family: $font-noto-sans;
 }
 
 // フォントウェイト
