@@ -1,0 +1,97 @@
+@use "global" as *;
+@use "sass:math";
+
+.header {
+	height: rem(80);
+	background-color: rgba(#0d2936, 32%);
+}
+
+.header__inner.inner {
+	display: flex;
+	max-width: initial;
+	height: inherit;
+	@include mq() {
+		max-width: initial;
+	}
+}
+
+.header__logo {
+	position: relative;
+	z-index: 10;
+	width: rem(102);
+	height: inherit;
+}
+
+.header__logo a {
+	display: grid;
+	place-items: center;
+	height: inherit;
+}
+
+.heaader__menu-button {
+	margin-left: auto;
+	position: relative;
+	z-index: 10;
+	// width: rem(32);
+	height: inherit;
+	@include mq() {
+		display: none;
+	}
+}
+
+.header__nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	display: none;
+	// opacity: 0;
+	padding: rem(190) 0 rem(40);
+	overflow-y: auto;
+	// pointer-events: none;
+	background-color: #408f95;
+	color: #fff;
+	// transition: all 0.3s ease-in-out;
+	@include mq() {
+		pointer-events: auto;
+		margin-left: auto;
+		position: static;
+		overflow: initial;
+		display: flex;
+		align-items: center;
+		height: inherit;
+		padding: 0;
+		background-color: transparent;
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.header__nav-items {
+	@include mq() {
+		display: flex;
+		height: inherit;
+		white-space: nowrap;
+	}
+}
+
+.header__nav-item {
+}
+
+.header__nav-sub-items {
+	@include mq() {
+		display: none;
+	}
+}
+
+.header__nav-sub-item {
+}
+
+/* hover */
+
+/* ドロワーオープン時 */
+// .header__nav[aria-hidden="false"] {
+// 		opacity: 1;
+//     pointer-events: auto;
+// }

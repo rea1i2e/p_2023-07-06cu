@@ -1,0 +1,59 @@
+@use 'global' as *;
+@use 'sass:math';
+
+.menu-button {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+	width: rem(32);
+}
+
+.menu-button span {
+	position: absolute;
+	display: block;
+  width: 100%;
+  height: 1px;
+  background-color: $white;
+	border-radius: 100vw;
+	transition: all 0.3s ease-in-out;
+}
+
+.menu-button::before {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: $white;
+	border-radius: 100vw;
+  content: "";
+  transform: translateY(#{rem(-8)});
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-button::after {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: $white;
+	border-radius: 100vw;
+  content: "";
+  transform: translateY(#{rem(8)});
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-button[aria-expanded="true"] {
+	width: rem(40);
+}
+
+.menu-button[aria-expanded="true"] span {
+	opacity: 0;
+}
+
+.menu-button[aria-expanded="true"]::before {
+  transform: translateY(0) rotate(37deg);
+}
+
+.menu-button[aria-expanded="true"]::after {
+  transform: translateY(0) rotate(-37deg);
+}
