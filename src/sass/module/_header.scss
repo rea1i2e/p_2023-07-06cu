@@ -4,6 +4,12 @@
 .header {
 	height: rem(80);
 	background-color: rgba(#0d2936, 32%);
+	@include mq() {
+		height: vw(1100, 80)
+	}
+	@include mq(lg) {
+		height: rem(80);
+	}
 }
 
 .header__inner.inner {
@@ -12,6 +18,11 @@
 	height: inherit;
 	@include mq() {
 		max-width: initial;
+		padding: 0 vw-lg(20) 0 vw-lg(40);
+	}
+	@include mq(lg) {
+		max-width: initial;
+		padding: 0 rem(20) 0 rem(40);
 	}
 }
 
@@ -20,6 +31,12 @@
 	z-index: 10;
 	width: rem(102);
 	height: inherit;
+	@include mq() {
+		width: vw-lg(133);
+	}
+	@include mq(lg) {
+		width: rem(133);
+	}
 }
 
 .header__logo a {
@@ -46,15 +63,11 @@
 	left: 0;
 	bottom: 0;
 	display: none;
-	// opacity: 0;
-	padding: rem(190) 0 rem(40);
+	padding: rem(190) $padding-sp rem(40);
 	overflow-y: auto;
-	// pointer-events: none;
 	background-color: #408f95;
 	color: #fff;
-	// transition: all 0.3s ease-in-out;
 	@include mq() {
-		pointer-events: auto;
 		margin-left: auto;
 		position: static;
 		overflow: initial;
@@ -69,15 +82,97 @@
 }
 
 .header__nav-items {
+	column-count: 2;
+	column-gap:  rem(6);
+	gap: rem(40) rem(6);
+	max-width: rem(540);
+	margin: 0 auto;
 	@include mq() {
 		display: flex;
+		max-width: initial;
 		height: inherit;
-		white-space: nowrap;
+	}
+}
+
+.header__nav-item:nth-child(n+2) {
+	margin-top: rem(28);
+	@include mq() {
+		margin-top: 0;
 	}
 }
 
 .header__nav-item {
+	font-size: rem(16);
+	font-weight: 700;
+	line-height: math.div(18, 16);
+	@include mq() {
+		height: inherit;
+		font-size: vw-lg(10);
+		font-weight: 400;
+	}
+	@include mq(lg) {
+		height: inherit;
+		font-size: rem(10);
+		font-weight: 400;
+	}
 }
+
+.header__nav-item > a {
+	display: flex;
+	align-items: flex-start;
+	padding: rem(12) 0;
+	@include mq() {
+		position: relative;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 0 vw-lg(20);
+		height: inherit;
+		white-space: nowrap;
+	}
+	@include mq(lg) {
+		padding: 0 rem(20);
+	}
+
+}
+
+.header__nav-item > a::before {
+	margin-right: rem(4);
+	flex-shrink: 0;
+	display: inline-block;
+	width: rem(18);
+	aspect-ratio: 1 / 1;
+	background: url(../images/common/icon_starfish.svg) no-repeat center / contain;
+	content: "";
+	@include mq() {
+		margin-right: 0;
+		margin-bottom: vw-lg(4);
+		display: block;
+		width: auto;
+		aspect-ratio: initial;
+		background-image: none;
+		content:  attr(data-english);
+		font-size: vw-lg(18);
+		font-family: $font-gotu;
+	}
+	@include mq(lg) {
+		margin-bottom: rem(4);
+		font-size: rem(18);
+	}
+}
+
+.header__nav-item > a::after {
+	@include mq() {
+		position: relative;
+		bottom: rem(-4);
+		width: 0;
+		height: 1px;
+		background-color: #fff;
+		content: "";
+		transition: width 0.3s ease-in-out;
+	}
+}
+
 
 .header__nav-sub-items {
 	@include mq() {
@@ -86,12 +181,19 @@
 }
 
 .header__nav-sub-item {
+	margin-left: rem(22);
+	font-weight: 400;
 }
 
-/* hover */
+.header__nav-sub-item > a {
+	display: block;
+	padding: rem(12) 0;
+}
 
-/* ドロワーオープン時 */
-// .header__nav[aria-hidden="false"] {
-// 		opacity: 1;
-//     pointer-events: auto;
-// }
+
+/* hover */
+.header__nav-item > a:hover::after {
+	@include mq() {
+		width: 100%;
+	}
+}
