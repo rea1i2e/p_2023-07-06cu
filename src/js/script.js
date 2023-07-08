@@ -1,5 +1,5 @@
 jQuery(function ($) {
-	$("#js-drawer").fadeIn(); // test
+	// $("#js-drawer").fadeIn(); // test
 
 	/* ------------------------------
 ドロワーメニュー開閉（フェード）

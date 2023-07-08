@@ -26,7 +26,7 @@
   background-color: $white;
 	border-radius: 100vw;
   content: "";
-  transform: translateY(#{rem(-8)});
+  transform: translateY(#{rem(-12)});
   transition: all 0.3s ease-in-out;
 }
 
@@ -38,7 +38,7 @@
   background-color: $white;
 	border-radius: 100vw;
   content: "";
-  transform: translateY(#{rem(8)});
+  transform: translateY(#{rem(12)});
   transition: all 0.3s ease-in-out;
 }
 
