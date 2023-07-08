@@ -1,6 +1,8 @@
 @use "global" as *;
 @use "sass:math";
 
+$common-margin: rem(28);
+
 .header {
 	height: rem(80);
 	background-color: rgba(#0d2936, 32%);
@@ -74,7 +76,7 @@
 	column-gap:  rem(6);
 	// gap: rem(40) rem(6);
 	max-width: rem(480);
-	margin: 0 auto;
+	margin: 0 auto $common-margin * -1;
 	@include mq() {
 		max-width: rem(680);
 		column-count: 3;
@@ -87,18 +89,21 @@
 }
 
 // Safariで2列目先頭にに余分な余白ができる。
-.header__nav-item:nth-child(n+2) {
-	margin-top: rem(28);
+// .header__nav-item:nth-child(n+2) {
+.header__nav-item {
+	// margin-top: rem(28);
 	@include mq(lg) {
 		margin-top: 0;
 	}
 }
 
 .header__nav-item {
-	margin-bottom: rem(28);
+	margin-bottom: $common-margin;
 	page-break-inside: avoid;
 	break-inside: avoid;
-	display: block;
+	display: inline-block;
+	// display: block;
+	width: 100%;
 	font-size: rem(16);
 	font-weight: 700;
 	line-height: math.div(18, 16);
