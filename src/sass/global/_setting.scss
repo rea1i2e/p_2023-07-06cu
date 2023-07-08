@@ -22,7 +22,13 @@ $font-lato: 'Lato', sans-serif;
 // ※検証ツールでしっかり反映されているか確認する
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: $font-noto-sans;
+}
+
+main {
+  flex: 1;
 }
 
 // フォントウェイト
