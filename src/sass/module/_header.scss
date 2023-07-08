@@ -1,7 +1,7 @@
 @use "global" as *;
 @use "sass:math";
 
-$common-margin: rem(28);
+$common-margin: rem(16);
 
 .header {
 	height: rem(80);
@@ -55,7 +55,7 @@ $common-margin: rem(28);
 	left: 0;
 	bottom: 0;
 	display: none;
-	padding: rem(190) $padding-sp rem(40);
+	padding: rem(92) rem(15) rem(40);
 	overflow-y: auto;
 	background-color: #408f95;
 	color: #fff;
@@ -73,7 +73,7 @@ $common-margin: rem(28);
 
 .header__nav-items {
 	column-count: 2;
-	column-gap:  rem(6);
+	column-gap:  rem(3);
 	// gap: rem(40) rem(6);
 	max-width: rem(480);
 	margin: 0 auto $common-margin * -1;
