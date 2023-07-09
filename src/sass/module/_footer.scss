@@ -1,0 +1,168 @@
+@use "global" as *;
+@use "sass:math";
+
+$common-margin-f: rem(16);
+
+.footer {
+	padding: rem(48) 0 rem(56);
+	background-color: #408f95;
+	color: #fff;
+	@include mq() {
+		padding: rem(80) 0 rem(80);
+	}
+}
+
+.footer__inner.inner {
+	@include mq() {
+	}
+}
+
+.footer__head {
+	@include mq() {
+		display: flex;
+		align-items: flex-end;
+		gap: rem(40);
+	}
+}
+
+.footer__logo {
+	position: relative;
+	z-index: 10;
+	width: rem(120);
+	@include mq() {
+		width: rem(200);
+	}
+}
+
+.footer__logo a {
+	display: grid;
+	place-items: center;
+	height: inherit;
+}
+
+.footer__sns-items {
+	margin-top: rem(16);
+	display: flex;
+	gap: rem(16);
+	@include mq() {
+		padding-bottom: rem(4);
+	}
+}
+
+.footer__sns-item {
+	width: rem(24);
+	@include mq() {
+		width: rem(32);
+	}
+}
+
+.footer__sns-item a {
+	display: block;
+	width: 100%;
+}
+
+.footer__nav {
+	margin-top: rem(30);
+	@include mq() {
+		margin-top: rem(12);
+	}
+}
+
+.footer__nav-items {
+	column-count: 2;
+	column-gap: rem(12);
+	max-width: rem(480);
+	margin: 0 auto $common-margin-f * -1;
+	@include mq() {
+		max-width: initial;
+		column-gap: rem(22);
+		column-count: 4;
+	}
+}
+
+// Safariで2列目先頭にに余分な余白ができる。
+// .footer__nav-item:nth-child(n+2) {
+.footer__nav-item {
+	// margin-top: rem(28);
+	@include mq() {
+		margin-top: 0;
+	}
+}
+
+.footer__nav-item {
+	margin-bottom: $common-margin-f;
+	page-break-inside: avoid;
+	break-inside: avoid;
+	display: inline-block;
+	// display: block;
+	width: 100%;
+	font-size: rem(16);
+	font-weight: 700;
+	line-height: math.div(18, 16);
+	@include mq() {
+		// margin-bottom: 0;
+		// height: inherit;
+	}
+}
+
+.footer__nav-item > a {
+	display: flex;
+	align-items: flex-start;
+	padding: rem(12) 0;
+	@include mq() {
+		position: relative;
+		// flex-direction: column;
+		// align-items: center;
+		// justify-content: center;
+		// padding: 0 rem(19);
+	}
+}
+
+.footer__nav-item > a::before {
+	margin-right: rem(4);
+	flex-shrink: 0;
+	display: inline-block;
+	width: rem(18);
+	aspect-ratio: 1 / 1;
+	background: url(../images/common/icon_starfish.svg) no-repeat center / contain;
+	content: "";
+	@include mq() {
+	}
+}
+
+.footer__nav-sub-items {
+	@include mq() {
+	}
+}
+
+.footer__nav-sub-item {
+	margin-left: rem(22);
+	font-weight: 400;
+}
+
+.footer__nav-sub-item > a {
+	display: block;
+	padding: rem(12) 0;
+}
+
+.footer__copyright {
+	margin-top: rem(40);
+	margin: rem(40) rem(-8);
+	font-family: $font-gotu;
+	font-size: rem(12);
+	font-weight: 400;
+	text-align: center;
+	@include mq() {
+		margin-top: rem(80);
+		font-size: rem(14);
+	}
+}
+
+/* hover */
+.footer__logo a:hover,
+.footer__sns-item a:hover,
+.footer__nav-item a:hover {
+	@include mq() {
+		opacity: 0.7;
+	}
+}
