@@ -3,6 +3,8 @@
 
 .button {
 	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	width: 100%;
 	padding: rem(16);
 	max-width: rem(202);
@@ -17,8 +19,24 @@
 	display: block;
 	width: rem(40);
 	height: rem(6);
-	background: url(../images/common/icon_arrow_right.svg) no-repeat center / contain;
+	mask-image: url(../images/common/icon_arrow_right.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  background-color: #fff;
 	content: "";
-	stroke: pink;
-	fill: pink;
+	transition: all 0.3s ease-in-out;
 }
+
+.button:hover::after {
+	background-color: yellow;
+}
+
+// .button::after {
+// 	display: block;
+// 	width: rem(40);
+// 	height: rem(6);
+// 	background: url(../images/common/icon_arrow_right.svg) no-repeat center / contain;
+// 	content: "";
+// 	stroke: pink;
+// 	fill: pink;
+// }
