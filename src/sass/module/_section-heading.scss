@@ -1,0 +1,69 @@
+@use "global" as *;
+@use "sass:math";
+
+.section-heading {
+	display: inline-flex;
+	display: inline-block;
+	// flex-direction: column;
+	// align-items: center;
+	color: #408f95;
+	font-size: rem(12);
+	font-weight: 400;
+	text-align: center;
+}
+
+.section-heading::before {
+	margin-bottom: rem(-4);
+	display: block;
+	content: attr(data-english);
+	color: #0d2936;
+	font-family: $font-gotu;
+	font-size: rem(32);
+	font-weight: 400;
+	@include mq() {
+		margin-bottom: rem(-2);
+		font-size: rem(40);
+	}
+}
+
+// .section-heading::before::first-letter {
+.section-heading::first-letter {
+	color: #408f95;
+}
+
+
+/* pc-white */
+.section-heading--pc-white {
+	@include mq() {
+		color: $white;
+	}
+}
+
+.section-heading--pc-white::before {
+	@include mq() {
+		color: $white;
+	}
+}
+
+.section-heading--pc-white::first-letter {
+	@include mq() {
+		color: #DDF0F1;
+	}
+}
+
+
+/* large */
+.section-heading--large::before {
+	font-size: rem(80);
+	margin-bottom: rem(-10);
+	@include mq() {
+		margin-bottom: rem(-26);
+		font-size: rem(80);
+	}
+}
+
+
+.test {
+	text-align: center;
+	background-color: pink;
+}
