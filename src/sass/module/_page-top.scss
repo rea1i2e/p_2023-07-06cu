@@ -2,6 +2,10 @@
 @use "sass:math";
 
 .page-top {
+	position: fixed;
+	bottom: rem(15);
+	right: rem(15);
+	z-index: 9999;
 	display: grid;
 	place-content: center;
 	width: rem(48);
@@ -11,6 +15,8 @@
 	border: 1px solid #408f95;
 	border-radius: 50%;
 	@include mq() {
+		bottom: rem(20);
+		right: rem(20);	
 		width: rem(80);
 	}
 }
@@ -18,11 +24,12 @@
 .page-top::after {
 	display: block;
 	width: rem(6);
-	height: rem(28);
-	background: url(../images/common/icon_arrow_top.svg) no-repeat center / contain;
+	height: rem(30);
+	background: url(../images/common/icon_arrow_top_sp.svg) no-repeat center / contain;
 	content: "";
 	@include mq() {
-		width: rem(6);
-		height: rem(40);
+		background-image: url(../images/common/icon_arrow_top.svg);
+		width: rem(8);
+		height: rem(42);
 	}
 }

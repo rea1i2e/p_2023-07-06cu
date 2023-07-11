@@ -18,4 +18,30 @@ jQuery(function ($) {
 			$("html,body").css("overflow", "initial");
 		}
 	});
+
+/* ------------------------------
+ページトップへ戻るボタン
+------------------------------ */
+const $pageTop = $('#js-page-top')
+$pageTop.hide();
+
+// 200pxスクロールしたらボタン表示
+$(window).scroll(function () {
+	if ($(this).scrollTop() > 200) {
+		$pageTop.fadeIn();
+	} else {
+		$pageTop.fadeOut();
+	}
+
+	// フッターまでスクロールしたらボタンをフッターの直前に止める
+	let footer = $("footer").offset().top; // フッターの位置を取得
+	let scrollTop = $(window).scrollTop(); // 現在のスクロール位置を取得
+	let windowHeight = $(window).height(); // 現在のウィンドウの高さを取得
+
+	if (scrollTop + windowHeight > footer) {
+		let position = scrollTop + windowHeight - footer + 20;
+		$pageTop.css("bottom", position);
+	} 
+});
+
 });
