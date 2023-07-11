@@ -1,0 +1,28 @@
+@use "global" as *;
+@use "sass:math";
+
+.page-top {
+	display: grid;
+	place-content: center;
+	width: rem(48);
+	aspect-ratio: 1 / 1;
+	padding-right: rem(4);
+	background-color: $white;
+	border: 1px solid #408f95;
+	border-radius: 50%;
+	@include mq() {
+		width: rem(80);
+	}
+}
+
+.page-top::after {
+	display: block;
+	width: rem(6);
+	height: rem(28);
+	background: url(../images/common/icon_arrow_top.svg) no-repeat center / contain;
+	content: "";
+	@include mq() {
+		width: rem(6);
+		height: rem(40);
+	}
+}
