@@ -12,18 +12,28 @@ $inner: 1080px;
 $padding-pc: 25px;
 $padding-sp: 15px;
 
-////////////////////
 // フォント設定
-////////////////////
-
 $font-noto-sans: 'Noto Sans JP', sans-serif;
 $font-gotu: 'Gotu', sans-serif;
 $font-lato: 'Lato', sans-serif;
-// ※検証ツールでしっかり反映されているか確認する
+
+
+// フォントウェイト
+$regular: 300;
+$normal: 400;
+$bold: 700;
+
+
+//色指定（共通性のあるものは出来る限り指定すると良い）
+$black: #111;
+$white: #fff;
+$green: #0D2936;
+$accent-green: #408F95;
+$green2: #DDF0F1;
 
 body {
   display: flex;
-  color: #0D2936;
+  color: $green;
   flex-direction: column;
   font-family: $font-noto-sans;
 }
@@ -31,16 +41,3 @@ body {
 main {
   flex: 1;
 }
-
-// フォントウェイト
-$regular: 300;
-$normal: 400;
-$bold: 700;
-
-////////////////////
-// 色の指定
-////////////////////
-
-//色指定（共通性のあるものは出来る限り指定すると良い）
-$black: #111;
-$white: #fff;

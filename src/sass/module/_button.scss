@@ -18,9 +18,9 @@
 	align-items: center;
 	justify-content: center;
 	padding: rem(15);
-	background: linear-gradient(to right, #fff 50%, #408f95 50%) no-repeat 100% / 200% 100%;
-	border: 1px solid #408f95;
-	color: #fff;
+	background: linear-gradient(to right, $white 50%, $green 50%) no-repeat 100% / 200% 100%;
+	border: 1px solid $green;
+	color: $white;
 	font-size: rem(14);
 	font-weight: 400;
 	line-height: math.div(22, 14);
@@ -35,7 +35,7 @@
 	display: block;
 	width: 100%;
 	height: 100%;
-	border: 1px solid #408f95;
+	border: 1px solid $green;
 	content: "";
 }
 
@@ -47,7 +47,7 @@
 	mask-image: url(../images/common/icon_arrow_right.svg);
 	mask-repeat: no-repeat;
 	mask-position: center;
-	background-color: #fff;
+	background-color: $white;
 	content: "";
 	transition: all 0.3s ease-in-out;
 }
@@ -55,10 +55,10 @@
 /* hover */
 .button:hover span {
 	background-position: 0%;
-	color: #408f95;
+	color: $green;
 }
 
 .button:hover span::after {
-	background-color: #408f95;
+	background-color: $green;
 }
 

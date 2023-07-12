@@ -6,7 +6,7 @@
 	display: inline-block;
 	// flex-direction: column;
 	// align-items: center;
-	color: #408f95;
+	color: $green;
 	font-size: rem(12);
 	font-weight: 400;
 	text-align: center;
@@ -16,7 +16,7 @@
 	margin-bottom: rem(-4);
 	display: block;
 	content: attr(data-english);
-	color: #0d2936;
+	color: $green;
 	font-family: $font-gotu;
 	font-size: rem(32);
 	font-weight: 400;
@@ -28,7 +28,7 @@
 
 // .section-heading::before::first-letter {
 .section-heading::first-letter {
-	color: #408f95;
+	color: $green;
 }
 
 
@@ -47,7 +47,7 @@
 
 .section-heading--pc-white::first-letter {
 	@include mq() {
-		color: #DDF0F1;
+		color: $green2;
 	}
 }
 

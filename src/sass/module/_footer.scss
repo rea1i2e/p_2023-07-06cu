@@ -6,7 +6,7 @@ $common-margin-f: rem(16);
 .footer {
 	padding: rem(48) 0 rem(56);
 	background-color: #408f95;
-	color: #fff;
+	color: $white;
 	@include mq() {
 		padding: rem(80) 0 rem(80);
 	}

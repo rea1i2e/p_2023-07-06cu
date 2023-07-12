@@ -5,7 +5,7 @@ $common-margin: rem(16);
 
 .header {
 	height: rem(80);
-	background-color: rgba(#0d2936, 32%);
+	background-color: rgba($green, 32%);
 	@include mq(lg) {
 		// padding-bottom: rem(10);
 		height: rem(90);
@@ -58,8 +58,8 @@ $common-margin: rem(16);
 	display: none;
 	padding: rem(92) rem(15) rem(40);
 	overflow-y: auto;
-	background-color: #408f95;
-	color: #fff;
+	background-color: $green;
+	color: $white;
 	@include mq(lg) {
 		margin-left: auto;
 		position: static;
@@ -160,7 +160,7 @@ $common-margin: rem(16);
 		bottom: rem(-4);
 		width: 0;
 		height: 1px;
-		background-color: #fff;
+		background-color: $white;
 		content: "";
 		transition: width 0.3s ease-in-out;
 	}
