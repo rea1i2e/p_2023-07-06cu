@@ -2,5 +2,11 @@
 @use 'sass:math';
 
 .cateory-label {
-	
+	display: inline-block;
+	padding: rem(10) rem(15);
+	color: $accent-green;
+	font-size: rem(12);
+	font-weight: 400;
+	line-height: 1;
+	border: 1px solid $accent-green;
 }
