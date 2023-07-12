@@ -1,14 +1,14 @@
 @use 'global' as *;
 @use 'sass:math';
 
-.cateory-label {
+.category-label {
 	display: inline-block;
 	padding: rem(8) rem(11);
-	color: $accent-green;
+	color: $greenaccent;
 	font-size: rem(12);
 	font-weight: 400;
 	line-height: 1;
-	border: 1px solid $accent-green;
+	border: 1px solid $greenaccent;
 	@include mq() {
 		padding: rem(10) rem(15);
 	}

@@ -1,0 +1,105 @@
+@use "global" as *;
+@use "sass:math";
+
+.campain-card {
+	background: $white;
+	box-shadow: rem(2) rem(2) rem(10) 0 rgba($black, 0.25);
+}
+
+.campain-card__image {
+	width: 100%;
+}
+
+.campain-card__image img {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 280 / 188;
+	object-fit: cover;
+	@include mq() {
+		aspect-ratio: 333 / 223;
+	}
+}
+
+.campain-card__body {
+	margin-top: 0;
+	padding: rem(16) rem(16) rem(24);
+	@include mq() {
+		padding: rem(24) rem(16) rem(40);
+	}
+}
+
+.campain-card__body-head {
+	padding-bottom: rem(8);
+	border-bottom: 1px solid $greenaccent;
+}
+
+.campain-card__label {
+}
+
+.campain-card__heading {
+	margin-top: rem(4);
+	font-size: rem(16);
+	font-weight: 500;
+}
+
+.campain-card__description {
+	margin-top: rem(10);
+	font-size: rem(14);
+	font-weight: 400;
+	text-align: center;
+	@include mq() {
+		margin-top: rem(16);
+		font-size: rem(16);
+	}
+}
+
+.campain-card__price-wrapper {
+	margin-top: rem(8);
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+.campain-card__price {
+	position: relative;
+	font-family: $font-lato;
+	font-size: rem(20);
+	font-weight: 700;
+	line-height: 1;
+	@include mq() {
+		font-size: rem(24);
+	}
+}
+
+.campain-card__price::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: rem(3);
+	background-color: #c94800;
+	content: "";
+}
+
+.campain-card__discount-price {
+	margin-left: rem(16);
+	color: $greenaccent;
+	font-family: $font-lato;
+	font-size: rem(32);
+	font-weight: 700;
+	line-height: 1;
+	@include mq() {
+		margin-left: rem(28);
+	font-size: rem(40);
+}
+}
+
+// test
+.campain-cards__card {
+	margin-top: rem(40);
+	width: rem(280);
+	@include mq() {
+		width: rem(333);
+	}
+}
