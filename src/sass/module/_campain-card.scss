@@ -1,9 +1,14 @@
 @use "global" as *;
 @use "sass:math";
 
-.campain-card {
+// .campain-card {
+// }
+
+.campain-card__link {
+	display: block;
 	background: $white;
 	box-shadow: rem(2) rem(2) rem(10) 0 rgba($black, 0.25);
+	transition: all 0.3s ease-in-out;
 }
 
 .campain-card__image {
@@ -91,8 +96,16 @@
 	line-height: 1;
 	@include mq() {
 		margin-left: rem(28);
-	font-size: rem(40);
+		font-size: rem(40);
+	}
 }
+
+
+/* hover */
+
+.campain-card__link:hover {
+	box-shadow: rem(2) rem(4) rem(20) 0 rgba($black, 0.25);
+	transform: translateY(#{rem(-5)});
 }
 
 // test
