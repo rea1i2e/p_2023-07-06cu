@@ -3,6 +3,15 @@
 
 .top__top-mv {
 	height: 100vh;
-	min-height: rem(700); // test
-	background-color: pink; // test
+	min-height: rem(667);
+	@include mq() {
+		min-height: rem(768);
+	}
+}
+
+.top__campaign {
+	margin-top: rem(36);
+	@include mq() {
+		margin-top: rem(110);
+	}
 }

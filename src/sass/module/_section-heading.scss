@@ -13,7 +13,7 @@
 }
 
 .section-heading::before {
-	margin-bottom: rem(-4);
+	// margin-bottom: rem(-4);
 	display: block;
 	content: attr(data-english);
 	color: $green;
@@ -28,7 +28,7 @@
 
 // .section-heading::before::first-letter {
 .section-heading::first-letter {
-	color: $green;
+	color: $greenaccent;
 }
 
 

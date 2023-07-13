@@ -74,4 +74,39 @@ box.each(function (i) {
 		}
 	});
 });
+
+	/* ------------------------------
+  トップ MVスライダー
+  ------------------------------ */
+	const mvSwiper = new Swiper(".js-top-mv-swiper", {
+		loop: true,
+		// autoplay: {
+		// 	delay: 4000,
+		// },
+		effect: "fade",
+		fadeEffect: {
+			crossFade: true,
+		},
+		speed: 2000,
+	});
+
+	/* ------------------------------
+  トップ キャンペーン スライダー
+  ------------------------------ */
+	const campaignSwiper = new Swiper(".js-top-campaign-swiper", {
+		// slidesPerView: 1.26,
+		slidesPerView: "auto",
+		// spaceBetween: 24,
+		breakpoints: {
+			768: {
+				// spaceBetween: 40,
+				// slidesPerView: 3.48,
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+			},
+		},
+	});
+	
 });

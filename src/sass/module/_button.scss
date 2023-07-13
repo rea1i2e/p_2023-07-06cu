@@ -18,8 +18,8 @@
 	align-items: center;
 	justify-content: center;
 	padding: rem(15);
-	background: linear-gradient(to right, $white 50%, $green 50%) no-repeat 100% / 200% 100%;
-	border: 1px solid $green;
+	background: linear-gradient(to right, $white 50%, $greenaccent 50%) no-repeat 100% / 200% 100%;
+	border: 1px solid $greenaccent;
 	color: $white;
 	font-size: rem(14);
 	font-weight: 400;
@@ -35,7 +35,7 @@
 	display: block;
 	width: 100%;
 	height: 100%;
-	border: 1px solid $green;
+	border: 1px solid $greenaccent;
 	content: "";
 }
 
@@ -50,15 +50,18 @@
 	background-color: $white;
 	content: "";
 	transition: all 0.3s ease-in-out;
+	@include mq() {
+		margin-left: rem(10);
+	}
 }
 
 /* hover */
 .button:hover span {
 	background-position: 0%;
-	color: $green;
+	color: $greenaccent;
 }
 
 .button:hover span::after {
-	background-color: $green;
+	background-color: $greenaccent;
 }
 
