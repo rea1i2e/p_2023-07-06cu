@@ -1,0 +1,70 @@
+@use "global" as *;
+@use "sass:math";
+
+// .blog-card {
+// }
+
+.blog-card__link {
+	display: block;
+	padding: rem(16) rem(16) rem(24);
+	background: $white;
+	box-shadow: rem(2) rem(2) rem(10) 0 rgba($black, 0.25);
+	transition: all 0.3s ease-in-out;
+}
+
+.blog-card__image {
+	width: 100%;
+}
+
+.blog-card__image img {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 301 / 201;
+	object-fit: cover;
+	@include mq() {
+		aspect-ratio: 333 / 223;
+	}
+}
+
+.blog-card__body {
+	margin-top: rem(24);
+	@include mq() {
+	}
+}
+
+.blog-card__body-head {
+	padding-bottom: rem(2);
+	border-bottom: 1px solid $greenaccent;
+}
+
+.blog-card__date {
+	display: block;
+	font-family: $font-gotu;
+	font-size: rem(12);
+	font-weight: 400;
+}
+
+.blog-card__heading {
+	font-size: rem(16);
+	font-weight: 500;
+}
+
+.blog-card__description {
+	margin-top: rem(16);
+	font-size: rem(16);
+	font-weight: 400;
+	@include mq() {
+		margin-top: rem(16);
+		font-size: rem(16);
+	}
+}
+
+
+
+
+/* hover */
+
+.blog-card__link:hover {
+	box-shadow: rem(2) rem(4) rem(20) 0 rgba($black, 0.25);
+	transform: translateY(#{rem(-5)});
+}

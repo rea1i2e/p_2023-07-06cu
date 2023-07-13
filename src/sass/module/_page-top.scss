@@ -12,7 +12,7 @@
 	aspect-ratio: 1 / 1;
 	padding-right: rem(4);
 	background-color: $white;
-	border: 1px solid $green;
+	border: 1px solid $greenaccent;
 	border-radius: 50%;
 	@include mq() {
 		bottom: rem(20);
