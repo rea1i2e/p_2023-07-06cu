@@ -1,0 +1,21 @@
+@use "global" as *;
+@use "sass:math";
+
+.u-color-box {
+	position: relative;
+}
+
+.u-color-box__color {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	background-color: $greenaccent;
+}
+
+.u-color-box img {
+	display: block;
+	width: 100%;
+}

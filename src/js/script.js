@@ -19,29 +19,59 @@ jQuery(function ($) {
 		}
 	});
 
-/* ------------------------------
+	/* ------------------------------
 ページトップへ戻るボタン
 ------------------------------ */
-const $pageTop = $('#js-page-top')
-$pageTop.hide();
+	const $pageTop = $("#js-page-top");
+	$pageTop.hide();
 
-// 200pxスクロールしたらボタン表示
-$(window).scroll(function () {
-	if ($(this).scrollTop() > 200) {
-		$pageTop.fadeIn();
-	} else {
-		$pageTop.fadeOut();
-	}
+	// 200pxスクロールしたらボタン表示
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 200) {
+			$pageTop.fadeIn();
+		} else {
+			$pageTop.fadeOut();
+		}
 
-	// フッターまでスクロールしたらボタンをフッターの直前に止める
-	let footer = $("footer").offset().top; // フッターの位置を取得
-	let scrollTop = $(window).scrollTop(); // 現在のスクロール位置を取得
-	let windowHeight = $(window).height(); // 現在のウィンドウの高さを取得
+		// フッターまでスクロールしたらボタンをフッターの直前に止める
+		let footer = $("footer").offset().top; // フッターの位置を取得
+		let scrollTop = $(window).scrollTop(); // 現在のスクロール位置を取得
+		let windowHeight = $(window).height(); // 現在のウィンドウの高さを取得
 
-	if (scrollTop + windowHeight > footer) {
-		let position = scrollTop + windowHeight - footer + 20;
-		$pageTop.css("bottom", position);
-	} 
+		if (scrollTop + windowHeight > footer) {
+			let position = scrollTop + windowHeight - footer + 20;
+			$pageTop.css("bottom", position);
+		}
+	});
+
+	/* ------------------------------
+ダイビング情報・お客様の声・料金一覧の画像アニメーション
+------------------------------ */
+	//要素の取得とスピードの設定
+	let box = $(".u-color-box"),
+		speed = 700;
+
+//.u-color-boxの付いた全ての要素に対して下記の処理を行う
+box.each(function (i) {
+	$(this).append('<div class="u-color-box__color"></div>');
+	let color = $(this).find($(".u-color-box__color")),
+		image = $(this).find("img");
+	let counter = 0;
+
+	image.css("opacity", "0");
+	color.css("width", "0%");
+
+	color.on("inview", function () {
+		if (counter == 0) {
+			$(this)
+				.delay(i * 300) // <- Here, we multiply the index by 300ms to create the staggered delay
+				.animate({ width: "100%" }, speed, function () {
+					image.css("opacity", "1");
+					$(this).css({ left: "0", right: "auto" });
+					$(this).animate({ width: "0%" }, speed);
+				});
+			counter = 1;
+		}
+	});
 });
-
 });
