@@ -1,0 +1,147 @@
+@use "global" as *;
+@use "sass:math";
+
+// .voice-card {
+// }
+
+.voice-card__link {
+	display: block;
+	padding: rem(16) rem(16) rem(24);
+	background: $white;
+	box-shadow: rem(2) rem(2) rem(10) 0 rgba($black, 0.25);
+	transition: all 0.3s ease-in-out;
+	@include mq() {
+		padding: rem(24)
+	}
+}
+
+.voice-card__head {
+	display: flex;
+	align-items: flex-end;
+	gap: rem(13);
+	@include mq() {
+		gap: rem(16);
+	}
+}
+
+.voice-card__head-text {
+	padding-bottom: rem(4);
+
+	border-bottom: 1px solid $greenaccent;
+}
+
+.voice-card__meta {
+	@include mq() {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+	}
+}
+
+.voice-card__attribute {
+	font-size: rem(12);
+	font-weight: 400;
+}
+
+.voice-card__label {
+}
+
+.voice-card__heading {
+	margin-top: rem(4);
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+	font-size: rem(16);
+	font-weight: 500;
+	line-height: math.div(23, 16);
+	@include mq() {
+		margin-top: rem(8);
+		-webkit-line-clamp: 2;
+		font-size: rem(24);
+		line-height: math.div(35, 24);
+	}
+}
+
+.voice-card__image {
+	flex-shrink: 0;
+	width: percentage(math.div(151, 313));
+	@include mq() {
+		width: percentage(math.div(180, 472));
+	}
+}
+
+.voice-card__image img {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 180 / 140;
+	object-fit: cover;
+	@include mq() {
+	}
+}
+
+.voice-card__body {
+	margin-top: 0;
+	@include mq() {
+	}
+}
+
+.voice-card__description {
+	margin-top: rem(14);
+	font-size: rem(16);
+	font-weight: 400;
+	line-height: math.div(24, 16);
+	@include mq() {
+		margin-top: rem(40);
+		font-size: rem(16);
+	}
+}
+
+.voice-card__price-wrapper {
+	margin-top: rem(8);
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+.voice-card__price {
+	position: relative;
+	font-family: $font-lato;
+	font-size: rem(20);
+	font-weight: 700;
+	line-height: 1;
+	@include mq() {
+		font-size: rem(24);
+	}
+}
+
+.voice-card__price::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: rem(3);
+	background-color: #c94800;
+	content: "";
+}
+
+.voice-card__discount-price {
+	margin-left: rem(16);
+	color: $greenaccent;
+	font-family: $font-lato;
+	font-size: rem(32);
+	font-weight: 700;
+	line-height: 1;
+	@include mq() {
+		margin-left: rem(28);
+		font-size: rem(40);
+	}
+}
+
+/* hover */
+
+.voice-card__link:hover {
+	box-shadow: rem(2) rem(4) rem(20) 0 rgba($black, 0.25);
+	transform: translateY(#{rem(-5)});
+}
