@@ -21,20 +21,31 @@
 }
 
 .top-campaign__swiper {
-	margin-right: calc(50% - 50vw);
+	// margin-right: calc(50% - 50vw);
+	margin-left: rem(-12); /* スライド間隔分の余白打ち消し */
+	// padding: rem(10); /* box-shadow用の余白 */
+	overflow: visible; /* 左側にズレたスライドをインナー幅で見切れさせない（代わりにセクションでoverflow: hidden; */
+	@include mq() {
+		margin-left: rem(-20); /* スライド間隔分の余白打ち消し */
+
+	}
+
 }
 
 .top-campaign__swiper-wrapper {
-	gap: rem(24);
+	// gap: rem(24);
 	@include mq() {
-		gap: rem(40);
+		// gap: rem(40);
 	}
 }
 
 .top-campaign__swiper-slide {
-	width: rem(280);
+	padding: rem(10) rem(12); /* box-shdadow分の余白, hover時のtranslate分の余白, スライド間隔 */
+	width: rem(280 + 24); /* スライド幅＋スライド間隔 */
 	@include mq() {
-		width: rem(333);
+		padding: rem(10) rem(20); /* box-shdadow分の余白, hover時のtranslate分の余白, スライド間隔 */
+		width: rem(333 + 40); /* スライド幅＋スライド間隔 */
+		// width: rem(333);
 	}
 }
 
