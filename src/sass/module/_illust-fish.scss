@@ -4,10 +4,14 @@
 .illust-fish {
 	width: 100%;
 	aspect-ratio: 437 / 201;
-	mask: url(../images/common/illust_fish.svg) no-repeat center / cover;
+	mask: url(../images/common/illust_fish.svg) no-repeat center / contain;
 	background-color: $greenaccent;
 }
 
 .illust-fish--white {
 	background-color: $white;
+}
+
+.illust-fish--reverse {
+	transform: scale(-1, 1);
 }

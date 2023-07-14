@@ -5,7 +5,20 @@
 	@include mq() {
 		position: relative;
 		padding-top: rem(92);
+	}
+}
+
+.top-blog::before {
+	@include mq() {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: -1;
+		height: rem(500);
 		background: url(../images/top/top_blog_bg.jpg) no-repeat top / 100% #{rem(500)};
+		background: url(../images/top/top_blog_bg.jpg) no-repeat top / cover;
+		content: "";
 	}
 }
 

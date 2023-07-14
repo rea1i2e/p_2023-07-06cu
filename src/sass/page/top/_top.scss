@@ -38,3 +38,10 @@
 	}
 }
 
+.top__voice {
+	margin-top: rem(76);
+	@include mq() {
+		margin-top: rem(22);
+	}
+}
+
