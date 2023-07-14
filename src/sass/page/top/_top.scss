@@ -15,3 +15,10 @@
 		margin-top: rem(110);
 	}
 }
+
+.top__about-us {
+	margin-top: rem(76);
+	@include mq() {
+		margin-top: rem(130);
+	}
+}

@@ -15,8 +15,8 @@
 }
 
 /* viewport1100pxの状態を基準にvw変換 */
-@function vw-lg($size) {
-	@return math.div($size, 1100) * 100vw;
+@function vw-xl($size) {
+	@return math.div($size, 1440) * 100vw;
 }
 
 // remへの計算式（16pxを基準としている。10pxを基準とする場合は16を10に変更する）
