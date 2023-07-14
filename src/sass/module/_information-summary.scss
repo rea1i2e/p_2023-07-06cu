@@ -1,0 +1,48 @@
+@use 'global' as *;
+@use 'sass:math';
+
+.information-summary {
+	@include mq() {
+		display: flex;
+		gap: rem(48);
+	}
+}
+
+.information-summary__image {
+	@include mq() {
+		flex-shrink: 0;
+		width: percentage(math.div(540px, $inner));
+	}
+}
+
+.information-summary__image img {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 345 / 227;
+	object-fit: cover;
+	
+}
+
+.information-summary__body {
+	margin-top: rem(22);
+	@include mq() {
+		margin-top: rem(56);
+		flex: 1;
+	}
+}
+
+.information-summary__heading {
+	border-bottom: 1px solid $greenaccent;
+	font-size: rem(20);
+	font-weight: 700;
+	@include mq() {
+		font-size: rem(24);
+	}
+}
+
+.information-summary__description {
+	margin-top: rem(8);
+	font-size: rem(16);
+	font-weight: 400;
+	line-height: math.div(24, 16);
+}

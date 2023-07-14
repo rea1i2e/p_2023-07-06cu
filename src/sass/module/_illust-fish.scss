@@ -1,0 +1,13 @@
+@use 'global' as *;
+@use 'sass:math';
+
+.illust-fish {
+	width: 100%;
+	aspect-ratio: 437 / 201;
+	mask: url(../images/common/illust_fish.svg) no-repeat center / cover;
+	background-color: $greenaccent;
+}
+
+.illust-fish--white {
+	background-color: $white;
+}

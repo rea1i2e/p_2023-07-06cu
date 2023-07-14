@@ -1,0 +1,28 @@
+@use "global" as *;
+@use "sass:math";
+
+.top-information {
+	padding: rem(76) 0 rem(80);
+	background-color: $green2;
+	@include mq() {
+		padding: rem(90) 0 rem(100);
+	}
+}
+
+// .top-information__inner.inner {
+// }
+
+.top-information__heading {
+	text-align: center;
+}
+
+.top-information__summary {
+	margin-top: rem(38);
+}
+
+
+.information-summary__button {
+	margin-top: rem(40);
+	text-align: center;
+}
+

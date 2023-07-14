@@ -2,11 +2,10 @@
 @use "sass:math";
 
 .section-heading {
-	display: inline-flex;
 	display: inline-block;
 	// flex-direction: column;
 	// align-items: center;
-	color: $green;
+	color: $greenaccent;
 	font-size: rem(12);
 	font-weight: 400;
 	text-align: center;
