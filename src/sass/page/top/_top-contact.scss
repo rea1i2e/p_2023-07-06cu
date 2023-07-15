@@ -1,0 +1,99 @@
+@use "global" as *;
+@use "sass:math";
+
+.top-contact {
+}
+
+.top-contact__inner.inner {
+}
+
+.top-contact__container {
+	@include mq() {
+		display: flex;
+		gap: rem(82);
+		padding: rem(80) rem(50);
+		box-shadow: rem(4) rem(4) rem(10) 0 rgba($black, 0.25);
+	}
+}
+
+.top-contact__pc-left {
+	margin: 0 auto;
+	width: rem(295);
+	@include mq() {
+		margin: 0;
+		width: percentage(math.div(440, 980));
+	}
+}
+
+.top-contact__logo {
+	margin: 0 auto;
+	width: rem(174);
+	@include mq() {
+		width: rem(200);
+	}
+}
+
+.top-contact__information {
+	margin-top: rem(6);
+	padding-top: rem(14);
+	border-top: 1px solid $greenaccent;
+	@include mq() {
+		display: flex;
+		align-items: flex-start;
+		gap: rem(20);
+		padding-top: rem(24);
+	}
+}
+
+.top-contact__data {
+	font-size: rem(16);
+	line-height: math.div(28, 16);
+	text-align: center;
+	@include mq() {
+		flex-shrink: 0;
+		text-align: left;
+	}
+}
+
+.top-contact__image {
+	margin-top: rem(14);
+	@include mq() {
+		margin-top: 0;
+	}
+}
+
+.top-contact__image img {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 295 / 160;
+	object-fit: cover;
+	@include mq() {
+		aspect-ratio: 273 / 148;
+	}
+}
+
+.top-contact__pc-right {
+	margin-top: rem(22);
+	@include mq() {
+		margin-top: 0;
+		padding-left: rem(80);
+		border-left: 1px solid $greenaccent;
+	}
+}
+
+.top-contact__heading {
+	text-align: center;
+}
+
+.top-contact__description {
+	margin-top: rem(6);
+	color: $greenaccent;
+	font-size: rem(14);
+	font-weight: 400;
+	text-align: center;
+}
+
+.top-contact__button {
+	margin-top: rem(38);
+	text-align: center;
+}

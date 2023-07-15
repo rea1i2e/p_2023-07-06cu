@@ -1,0 +1,9 @@
+@use 'global' as *;
+@use 'sass:math';
+
+.common__footer {
+	margin-top: rem(100);
+	@include mq() {
+		margin-top: rem(160);
+	}
+}

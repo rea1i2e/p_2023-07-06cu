@@ -54,7 +54,7 @@
 /* large */
 .section-heading--large::before {
 	font-size: rem(80);
-	margin-bottom: rem(-10);
+	margin-bottom: rem(-28);
 	@include mq() {
 		margin-bottom: rem(-26);
 		font-size: rem(80);
