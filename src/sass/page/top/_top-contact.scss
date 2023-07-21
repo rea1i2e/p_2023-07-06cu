@@ -2,9 +2,33 @@
 @use "sass:math";
 
 .top-contact {
+	position: relative;
 }
 
 .top-contact__inner.inner {
+	position: relative;
+	@include mq() {
+		position: static;
+	}
+	@include mq(xl) {
+		position: relative;
+	}
+}
+.top-contact__illust1 {
+	position: absolute;
+	top: rem(-26);
+	right: rem(15);
+	width: rem(109);
+	@include mq() {
+		top: vw-xl(-40);
+		right: vw-xl(49);
+		width: vw-xl(301);
+	}
+	@include mq(xl) {
+		top: rem(-42);
+		right: rem(-105);
+		width: rem(301);
+	}
 }
 
 .top-contact__container {

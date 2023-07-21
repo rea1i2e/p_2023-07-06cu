@@ -1,0 +1,10 @@
+@use 'global' as *;
+@use 'sass:math';
+
+.illust-seahorse {
+	width: 100%;
+	aspect-ratio: 71 / 162;
+	background: url(../images/common/illust_seahorse.svg) no-repeat center / contain;
+	// background-color: $greenaccent;
+}
+

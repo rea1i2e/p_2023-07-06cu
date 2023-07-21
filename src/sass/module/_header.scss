@@ -63,7 +63,7 @@ $common-margin: rem(16);
 	display: none;
 	padding: rem(92) rem(15) rem(40);
 	overflow-y: auto;
-	background-color: $green;
+	background-color: $greenaccent;
 	color: $white;
 	@include mq(lg) {
 		margin-left: auto;
