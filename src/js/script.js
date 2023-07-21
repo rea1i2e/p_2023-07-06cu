@@ -1,5 +1,35 @@
 jQuery(function ($) {
-	// $("#js-drawer").fadeIn(); // test
+
+	/* ------------------------------
+ローディングアニメーション
+------------------------------ */
+setTimeout(function() {
+  let webStorage = function () {
+    if (sessionStorage.getItem('access')) {
+      //2回目以降アクセス時の処理
+      console.log('2回目以降のアクセスです');
+			$('.js-loading').hide();
+    } else {
+      //初回アクセス時の処理
+      sessionStorage.setItem('access', 0);
+      console.log('初回アクセスです');  
+      setTimeout(function() {
+        $('.js-texts').fadeOut(500, function() {
+          setTimeout(function() {
+            $('.js-texts').fadeIn(500);
+            $('.js-texts p').css('-webkit-text-fill-color', 'initial').css('background', 'none');
+          }, 1000);
+        });
+      }, 1500);
+
+      setTimeout(function() {
+        $('.js-loading').fadeOut(1000);
+      }, 4000);
+    }
+  }
+  webStorage();
+}, 0);
+
 
 	/* ------------------------------
 ドロワーメニュー開閉（フェード）
@@ -80,9 +110,9 @@ box.each(function (i) {
   ------------------------------ */
 	const mvSwiper = new Swiper(".js-top-mv-swiper", {
 		loop: true,
-		// autoplay: {
-		// 	delay: 4000,
-		// },
+		autoplay: {
+			delay: 4000,
+		},
 		effect: "fade",
 		fadeEffect: {
 			crossFade: true,
