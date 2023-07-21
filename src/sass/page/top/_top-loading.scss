@@ -80,12 +80,12 @@
 
 .top-loading__title {
 	display: block;
-	background-size: 200% 100%;
-	background-image: linear-gradient(to right, $greenaccent, $greenaccent 50%, $white 50%);
-	background-position: 100%;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	animation: appearText 1s ease-in forwards;
+background-size: 200% 100%;
+background-image: linear-gradient(to right, $greenaccent, $greenaccent 50%, $white 50%);
+background-position: 100%;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: appearText 1s ease-in forwards;
 	font-family: $font-lato;
 	font-size: rem(40);
 	font-weight: 400;
