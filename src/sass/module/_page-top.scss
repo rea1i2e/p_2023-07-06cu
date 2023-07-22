@@ -31,5 +31,13 @@
 		background-image: url(../images/common/icon_arrow_top.svg);
 		width: rem(8);
 		height: rem(42);
+		transition: all 0.3s ease-in-out;
+	}
+}
+
+/* hover */
+.page-top:hover::after {
+	@include mq() {
+		transform: translateY(#{rem(-4)});
 	}
 }
