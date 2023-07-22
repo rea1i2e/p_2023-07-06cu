@@ -4,7 +4,6 @@
 .top-voice {
 	@include mq() {
 		position: relative;
-		background: url(../images/top/top_voice_bg.jpg) no-repeat top / 100% #{rem(500)};
 		padding-top: rem(110);
 	}
 	@include mq(xl) {

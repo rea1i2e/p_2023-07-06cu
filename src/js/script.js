@@ -7,12 +7,10 @@ setTimeout(function() {
   let webStorage = function () {
     if (sessionStorage.getItem('access')) {
       //2回目以降アクセス時の処理
-      console.log('2回目以降のアクセスです');
 			$('.js-loading').hide();
     } else {
       //初回アクセス時の処理
       sessionStorage.setItem('access', 0);
-      console.log('初回アクセスです');  
       setTimeout(function() {
         $('.js-texts').fadeOut(500, function() {
           setTimeout(function() {
@@ -46,6 +44,14 @@ setTimeout(function() {
 			$("#js-drawer").attr("aria-hidden", "true");
 			$("#js-drawer").fadeOut();
 			$("html,body").css("overflow", "initial");
+		}
+	});
+
+	$(window).resize(function() {
+		if ($(window).width() >= 1100) {
+			if ($("#js-menu").attr("aria-expanded") == "true") {
+				$("#js-menu").click();
+			}
 		}
 	});
 
