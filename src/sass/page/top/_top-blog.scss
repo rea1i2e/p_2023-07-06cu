@@ -23,10 +23,8 @@
 }
 
 .top-blog__inner.inner {
-	// padding: 0 rem(20); // test デザイン通りの場合
 	@include mq(xl) {
 		position: relative;
-		// padding: 0 rem(25); // test
 	}
 }
 

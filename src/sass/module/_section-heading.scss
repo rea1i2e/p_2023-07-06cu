@@ -3,8 +3,6 @@
 
 .section-heading {
 	display: inline-block;
-	// flex-direction: column;
-	// align-items: center;
 	color: $greenaccent;
 	font-size: rem(12);
 	font-weight: 400;
@@ -12,7 +10,6 @@
 }
 
 .section-heading::before {
-	// margin-bottom: rem(-4);
 	display: block;
 	content: attr(data-english);
 	color: $green;
@@ -25,7 +22,6 @@
 	}
 }
 
-// .section-heading::before::first-letter {
 .section-heading::first-letter {
 	color: $greenaccent;
 }

@@ -57,11 +57,15 @@
 
 /* hover */
 .button:hover span {
-	background-position: 0%;
-	color: $greenaccent;
+	@include mq() {
+		background-position: 0%;
+		color: $greenaccent;
+	}
 }
 
 .button:hover span::after {
-	background-color: $greenaccent;
+	@include mq() {
+		background-color: $greenaccent;
+	}
 }
 

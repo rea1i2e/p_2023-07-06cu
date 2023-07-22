@@ -3,9 +3,6 @@
 
 .top-about-us {
 	position: relative;
-	@include mq() {
-		// padding-bottom: rem(60);
-	}
 }
 
 .top-about-us__inner.inner {
@@ -13,7 +10,6 @@
 		position: relative;
 		max-width: calc(#{$inner} + #{rem(98 + 25)} * 2);
 		padding: 0 rem( 98 + 25 ) rem(92); /* イラスト分の余白追加 */
-		// background-color: orange; // test
 	}
 }
 
@@ -23,7 +19,6 @@
 
 .top-about-us__summary {
 	margin-top: rem(27);
-	// background-color: orange; // test
 }
 
 .top-about-us__illust {

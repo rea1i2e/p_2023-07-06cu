@@ -3,20 +3,16 @@
 
 .about-us-summary {
 	position: relative;
-	// background-color: rgba(yellow, 0.5); // test
 }
 
 .about-us-summary__images {
 	position: relative;
 	width: 100%;
 	aspect-ratio: 345 / 212;
-	// background-color: pink; // test
 	@include mq() {
 		position: absolute;
 		top: 0;
 		bottom: 0;
-		// display: none;
-		// aspect-ratio: 1080 / 661;
 		aspect-ratio: auto;
 	}
 }
@@ -30,8 +26,6 @@
 		width: 100%;
 		width: percentage(math.div(880, 1080));
 		top: rem(80);
-		// bottom: auto;
-		// position: relative;
 	}
 }
 
@@ -49,7 +43,6 @@
 }
 
 .about-us-summary__image2 {
-	// display: none; // test
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -79,15 +72,10 @@
 	
 	@include mq() {
 		position: relative;
-		// margin-top: rem(200);
-		// position: absolute;
-		// top: 0;
 		display: flex;
 		align-items: flex-start;
 		gap: rem(40);
-		// padding: percentage(math.div(200, 1080)) percentage(math.div(32, 1080)) percentage(math.div(217, 1080)) percentage(math.div(200, 1080));
 		padding: vw-xl(200) vw-xl(32) vw-xl(217) vw-xl(200);
-		// background-color: rgba(beige, 0.5); // test
 	}
 	@include mq(xl) {
 		padding: rem(200) rem(32) rem(217) rem(200);

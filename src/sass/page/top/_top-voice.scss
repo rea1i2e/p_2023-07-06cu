@@ -3,7 +3,6 @@
 
 .top-voice {
 	@include mq() {
-		// background-color: pink; //test
 		position: relative;
 		background: url(../images/top/top_voice_bg.jpg) no-repeat top / 100% #{rem(500)};
 		padding-top: rem(110);
@@ -14,11 +13,9 @@
 }
 
 .top-voice__inner.inner {
-	// padding: 0 rem(20); // test デザイン通りの場合
 	@include mq(xl) {
 		position: relative;
 		padding-top: rem(110);
-		// padding: 0 rem(25); // test
 	}
 }
 

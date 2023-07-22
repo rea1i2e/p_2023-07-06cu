@@ -11,7 +11,7 @@
 	box-shadow: rem(2) rem(2) rem(10) 0 rgba($black, 0.25);
 	transition: all 0.3s ease-in-out;
 	@include mq() {
-		padding: rem(24)
+		padding: rem(24);
 	}
 }
 
@@ -140,8 +140,9 @@
 }
 
 /* hover */
-
 .voice-card__link:hover {
-	box-shadow: rem(2) rem(4) rem(20) 0 rgba($black, 0.25);
-	transform: translateY(#{rem(-5)});
+	@include mq() {
+		box-shadow: rem(2) rem(4) rem(20) 0 rgba($black, 0.25);
+		transform: translateY(#{rem(-5)});
+	}
 }

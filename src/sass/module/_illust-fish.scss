@@ -4,7 +4,11 @@
 .illust-fish {
 	width: 100%;
 	aspect-ratio: 437 / 201;
-	mask: url(../images/common/illust_fish.svg) no-repeat center / contain;
+	// mask: url(../images/common/illust_fish.svg) no-repeat center / contain; // W3C CSS 検証サービスでエラー表示
+	mask-image: url(../images/common/illust_fish.svg);
+	mask-position: center;
+	mask-repeat: no-repeat;
+	mask-size: contain;
 	background-color: $greenaccent;
 }
 
