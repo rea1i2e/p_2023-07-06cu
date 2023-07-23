@@ -1,33 +1,33 @@
 jQuery(function ($) {
-
 	/* ------------------------------
 ローディングアニメーション
 ------------------------------ */
-setTimeout(function() {
-  let webStorage = function () {
-    if (sessionStorage.getItem('access')) {
-      //2回目以降アクセス時の処理
-			$('.js-loading').hide();
-    } else {
-      //初回アクセス時の処理
-      sessionStorage.setItem('access', 0);
-      setTimeout(function() {
-        $('.js-texts').fadeOut(500, function() {
-          setTimeout(function() {
-            $('.js-texts').fadeIn(500);
-            $('.js-texts p').css('-webkit-text-fill-color', 'initial').css('background', 'none');
-          }, 1000);
-        });
-      }, 1500);
+	setTimeout(function () {
+		let webStorage = function () {
+			if (sessionStorage.getItem("access")) {
+				//2回目以降アクセス時の処理
+				$(".js-loading").hide();
+			} else {
+				//初回アクセス時の処理
+				sessionStorage.setItem("access", 0);
+				setTimeout(function () {
+					$(".js-texts").fadeOut(500, function () {
+						setTimeout(function () {
+							$(".js-texts").fadeIn(500);
+							$(".js-texts p")
+								.css("-webkit-text-fill-color", "initial")
+								.css("background", "none");
+						}, 1000);
+					});
+				}, 1500);
 
-      setTimeout(function() {
-        $('.js-loading').fadeOut(1000);
-      }, 4000);
-    }
-  }
-  webStorage();
-}, 0);
-
+				setTimeout(function () {
+					$(".js-loading").fadeOut(1000);
+				}, 4000);
+			}
+		};
+		webStorage();
+	}, 0);
 
 	/* ------------------------------
 ドロワーメニュー開閉（フェード）
@@ -40,17 +40,25 @@ setTimeout(function() {
 			$("#js-drawer").fadeIn();
 			$("html,body").css("overflow", "hidden");
 		} else {
-			$(this).attr("aria-expanded", false);
+			$(this).attr("aria-expanded", "false");
 			$("#js-drawer").attr("aria-hidden", "true");
 			$("#js-drawer").fadeOut();
 			$("html,body").css("overflow", "initial");
 		}
 	});
 
-	$(window).resize(function() {
+	$(window).resize(function () {
 		if ($(window).width() >= 1100) {
-			if ($("#js-menu").attr("aria-expanded") == "true") {
-				$("#js-menu").click();
+			$("html,body").css("overflow", "initial"); // スクロールさせる
+			if ($("#js-menu").attr("aria-expanded") == "false") { // メニューボタンクリック前
+				$("#js-drawer").fadeIn(); // メニュー表示
+			}
+		} else {
+			if ($("#js-menu").attr("aria-expanded") == "false") { // メニューボタンクリック前
+				$("#js-drawer").fadeOut();
+				$("html,body").css("overflow", "initial"); // スクロールさせる
+			} else {
+				$("html,body").css("overflow", "hidden"); // スクロールさせない
 			}
 		}
 	});
@@ -87,29 +95,29 @@ setTimeout(function() {
 	let box = $(".u-color-box"),
 		speed = 700;
 
-//.u-color-boxの付いた全ての要素に対して下記の処理を行う
-box.each(function (i) {
-	$(this).append('<div class="u-color-box__color"></div>');
-	let color = $(this).find($(".u-color-box__color")),
-		image = $(this).find("img");
-	let counter = 0;
+	//.u-color-boxの付いた全ての要素に対して下記の処理を行う
+	box.each(function (i) {
+		$(this).append('<div class="u-color-box__color"></div>');
+		let color = $(this).find($(".u-color-box__color")),
+			image = $(this).find("img");
+		let counter = 0;
 
-	image.css("opacity", "0");
-	color.css("width", "0%");
+		image.css("opacity", "0");
+		color.css("width", "0%");
 
-	color.on("inview", function () {
-		if (counter == 0) {
-			$(this)
-				.delay(i * 300) // <- Here, we multiply the index by 300ms to create the staggered delay
-				.animate({ width: "100%" }, speed, function () {
-					image.css("opacity", "1");
-					$(this).css({ left: "0", right: "auto" });
-					$(this).animate({ width: "0%" }, speed);
-				});
-			counter = 1;
-		}
+		color.on("inview", function () {
+			if (counter == 0) {
+				$(this)
+					.delay(i * 300) // <- Here, we multiply the index by 300ms to create the staggered delay
+					.animate({ width: "100%" }, speed, function () {
+						image.css("opacity", "1");
+						$(this).css({ left: "0", right: "auto" });
+						$(this).animate({ width: "0%" }, speed);
+					});
+				counter = 1;
+			}
+		});
 	});
-});
 
 	/* ------------------------------
   トップ MVスライダー
@@ -144,5 +152,4 @@ box.each(function (i) {
 			},
 		},
 	});
-	
 });

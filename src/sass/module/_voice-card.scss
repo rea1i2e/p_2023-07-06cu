@@ -69,6 +69,7 @@
 	max-width: rem(151);
 	@include mq() {
 		width: percentage(math.div(180, 472));
+		max-width: initial;
 	}
 }
 
