@@ -4,17 +4,12 @@
 .top-voice {
 	@include mq() {
 		position: relative;
-		padding-top: rem(110);
-	}
-	@include mq(xl) {
-		padding-top: 0;
 	}
 }
 
 .top-voice__inner.inner {
-	@include mq(xl) {
+	@include mq() {
 		position: relative;
-		padding-top: rem(110);
 	}
 }
 
@@ -22,14 +17,10 @@
 	display: none;
 	@include mq() {
 		position: absolute;
-		top: 0;
-		left: vw-xl(100);
+		top: rem(-116);
+		left: calc(50% - min(rem(620), vw-xl(620)));
 		display: block;
-		width: vw-xl(301);
-	}
-	@include mq(xl) {
-		left: rem(-55);
-		width: rem(301);
+		width: min(vw-xl(301), rem(301));
 	}
 }
 
@@ -38,17 +29,9 @@
 	@include mq() {
 		position: absolute;
 		bottom: rem(-68);
-		left: 50%;
-		left: calc(50% + vw-xl(504));
-		transform: translateX(-50%);
+		right: calc(50% - min(rem(542), vw-xl(542)));
 		display: block;
-		width: vw-xl(71);
-	}
-	@include mq(xl) {
-		width: rem(71);
-		right: rem(25);
-		left: auto;
-		transform: none;
+		width: min(rem(71),vw-xl(71));
 	}
 }
 

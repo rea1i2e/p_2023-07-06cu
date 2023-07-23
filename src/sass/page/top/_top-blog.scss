@@ -23,7 +23,7 @@
 }
 
 .top-blog__inner.inner {
-	@include mq(xl) {
+	@include mq() {
 		position: relative;
 	}
 }
@@ -32,15 +32,10 @@
 	display: none;
 	@include mq() {
 		position: absolute;
-		top: vw-xl(24);
-		left: vw-xl(100);
-		display: block;
-		width: vw-xl(437);
-	}
-	@include mq(xl) {
 		top: rem(-68);
-		left: rem(-55);
-		width: rem(437);
+		left: calc(50% - min(vw-xl(620), rem(620)));
+		display: block;
+		width: min(vw-xl(437), rem(437));
 	}
 }
 

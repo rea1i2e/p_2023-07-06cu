@@ -1,0 +1,9 @@
+@use 'global' as *;
+@use 'sass:math';
+
+.illust-coral {
+	width: 100%;
+	aspect-ratio: 194 / 181;
+	background: url(../images/common/illust_coral.svg) no-repeat center / contain;
+}
+

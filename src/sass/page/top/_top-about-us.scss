@@ -8,8 +8,6 @@
 .top-about-us__inner.inner {
 	@include mq() {
 		position: relative;
-		max-width: calc(#{$inner} + #{rem(98 + 25)} * 2);
-		padding: 0 rem( 98 + 25 ) rem(92); /* イラスト分の余白追加 */
 	}
 }
 
@@ -27,7 +25,8 @@
 		width: rem(194);
 		display: block;
 		position: absolute;
-		right: rem(25);
-		bottom: 0;
+		right: calc(50% - min(vw-xl(638), rem(638)));
+		right: calc(50% - vw(1440, 638));
+		bottom: rem(-96);
 	}
 }

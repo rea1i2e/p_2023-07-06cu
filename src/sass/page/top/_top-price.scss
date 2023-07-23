@@ -12,7 +12,7 @@
 }
 
 .top-price__inner.inner {
-		@include mq(xl) {
+		@include mq() {
 		position: relative;
 	}
 
@@ -23,15 +23,10 @@
 	display: none;
 	@include mq() {
 		position: absolute;
-		bottom: vw-xl(60);
-		left: vw-xl(100);
+		bottom: rem(-36);
+		left: calc(50% - min(rem(620),vw-xl(620)));
 		display: block;
-		width: vw-xl(437);
-	}
-	@include mq(xl) {
-		bottom: rem(-40);
-		left: rem(-55);
-		width: rem(437);
+		width: min(rem(437),vw-xl(437));
 	}
 }
 
