@@ -2,11 +2,11 @@
 @use "sass:math";
 
 .campain-card {
-	height: 100%;
 }
 
 .campain-card__link {
-	display: block;
+	display: flex;
+	flex-direction: column;
 	height: 100%;
 	background: $white;
 	box-shadow: rem(2) rem(2) rem(10) 0 rgba($black, 0.25);
@@ -29,6 +29,9 @@
 
 .campain-card__body {
 	margin-top: 0;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
 	padding: rem(16) rem(16) rem(24);
 	@include mq() {
 		padding: rem(24) rem(16) rem(40);
@@ -61,7 +64,8 @@
 }
 
 .campain-card__price-wrapper {
-	margin-top: rem(8);
+	margin-top: auto;
+	padding-top: rem(8);
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
@@ -104,7 +108,6 @@
 
 
 /* hover */
-
 .campain-card__link:hover {
 	@include mq() {
 		box-shadow: rem(2) rem(4) rem(20) 0 rgba($black, 0.25);

@@ -38,6 +38,7 @@
 .top-campaign__swiper-slide {
 	padding: rem(10) rem(12); /* box-shdadow分の余白, hover時のtranslate分の余白, スライド間隔 */
 	width: rem(280 + 24); /* スライド幅＋スライド間隔 */
+	height: auto;
 	@include mq() {
 		padding: rem(10) rem(20); /* box-shdadow分の余白, hover時のtranslate分の余白, スライド間隔 */
 		width: rem(333 + 40); /* スライド幅＋スライド間隔 */
