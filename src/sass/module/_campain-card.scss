@@ -2,10 +2,12 @@
 @use "sass:math";
 
 .campain-card {
+	height: 100%;
 }
 
 .campain-card__link {
 	display: block;
+	height: 100%;
 	background: $white;
 	box-shadow: rem(2) rem(2) rem(10) 0 rgba($black, 0.25);
 	transition: all 0.3s ease-in-out;
