@@ -33,31 +33,35 @@ jQuery(function ($) {
 ドロワーメニュー開閉（フェード）
 ------------------------------ */
 	$("#js-menu").click(function () {
-		$("body").toggleClass("is-drawerActive");
 		if ($(this).attr("aria-expanded") == "false") {
+			$("body").addClass("is-drawerActive");
 			$(this).attr("aria-expanded", true);
 			$("#js-drawer").attr("aria-hidden", "false");
 			$("#js-drawer").fadeIn();
 			$("html,body").css("overflow", "hidden");
 		} else {
+			$("body").removeClass("is-drawerActive");
 			$(this).attr("aria-expanded", "false");
 			$("#js-drawer").attr("aria-hidden", "true");
 			$("#js-drawer").fadeOut();
 			$("html,body").css("overflow", "initial");
 		}
 	});
-
+	
 	$(window).resize(function () {
 		if ($(window).width() >= 1100) {
+			$("body").removeClass("is-drawerActive");
 			$("html,body").css("overflow", "initial"); // スクロールさせる
 			if ($("#js-menu").attr("aria-expanded") == "false") { // メニューボタンクリック前
 				$("#js-drawer").fadeIn(); // メニュー表示
 			}
 		} else {
 			if ($("#js-menu").attr("aria-expanded") == "false") { // メニューボタンクリック前
+				$("body").removeClass("is-drawerActive");
 				$("#js-drawer").fadeOut();
 				$("html,body").css("overflow", "initial"); // スクロールさせる
 			} else {
+				$("body").addClass("is-drawerActive");
 				$("html,body").css("overflow", "hidden"); // スクロールさせない
 			}
 		}
