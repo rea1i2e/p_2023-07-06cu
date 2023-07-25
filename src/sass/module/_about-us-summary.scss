@@ -13,7 +13,7 @@
 		position: absolute;
 		top: 0;
 		bottom: 0;
-		aspect-ratio: auto;
+		aspect-ratio: 1080 / 660;
 	}
 }
 
@@ -23,9 +23,7 @@
 	bottom: 0;
 	width: percentage(math.div(281, 345));
 	@include mq() {
-		width: 100%;
 		width: percentage(math.div(880, 1080));
-		top: rem(80);
 	}
 }
 
@@ -35,8 +33,7 @@
 	aspect-ratio: 281 / 186;
 	object-fit: cover;
 	@include mq() {
-		height: 100%;
-		aspect-ratio: initial;
+		aspect-ratio: 880 / 581;
 
 	}
 	
@@ -49,7 +46,6 @@
 	width: percentage(math.div(128, 345));
 	@include mq() {
 		width: percentage(math.div(399, 1080));
-
 	}
 
 }
@@ -60,8 +56,7 @@
 	aspect-ratio: 128 / 194;
 	object-fit: cover;
 	@include mq() {
-		height: 100%;
-		aspect-ratio: initial;
+		aspect-ratio: 399 / 606;
 
 	}
 
@@ -69,16 +64,12 @@
 
 .about-us-summary__content {
 	margin-top: rem(40);
-	
 	@include mq() {
 		position: relative;
 		display: flex;
 		align-items: flex-start;
 		gap: rem(40);
-		padding: vw-xl(200) vw-xl(32) vw-xl(217) vw-xl(200);
-	}
-	@include mq(xl) {
-		padding: rem(200) rem(32) rem(217) rem(200);
+		padding: percentage(math.div(200, 1080)) percentage(math.div(32, 1080)) percentage(math.div(217, 1080)) percentage(math.div(200, 1080));
 	}
 }
 
@@ -92,10 +83,7 @@
 		flex-shrink: 0;
 		color: $white;
 		line-height: math.div(100, 80);
-		font-size: vw-xl(80);
-	}
-	@include mq(xl) {
-		font-size: rem(80);
+		font-size: min(vw-xl(80), rem(80));
 	}
 }
 
