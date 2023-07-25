@@ -35,7 +35,7 @@
 	@include mq() {
 		display: flex;
 		align-items: flex-end;
-		justify-content: space-between;
+		// justify-content: space-between;
 	}
 }
 
@@ -45,6 +45,7 @@
 }
 
 .voice-card__label {
+	margin-left: auto;
 }
 
 .voice-card__heading {
