@@ -40,7 +40,6 @@
 
 .campain-card__body-head {
 	padding-bottom: rem(8);
-	border-bottom: 1px solid $greenaccent;
 }
 
 .campain-card__label {
@@ -53,19 +52,20 @@
 }
 
 .campain-card__description {
-	margin-top: rem(10);
+	margin-top: auto;
+	padding-top: rem(10);
+	border-top: 1px solid $greenaccent;
 	font-size: rem(14);
 	font-weight: 400;
 	text-align: center;
 	@include mq() {
-		margin-top: rem(16);
+		padding-top: rem(16);
 		font-size: rem(16);
 	}
 }
 
 .campain-card__price-wrapper {
-	margin-top: auto;
-	padding-top: rem(8);
+	margin-top: rem(8);
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
