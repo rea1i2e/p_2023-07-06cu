@@ -22,11 +22,10 @@
 .top-about-us__illust {
 	display: none;
 	@include mq() {
-		width: rem(194);
+		width: min(vw-xl(194) ,rem(194));
 		display: block;
 		position: absolute;
 		right: calc(50% - min(vw-xl(638), rem(638)));
-		right: calc(50% - vw(1440, 638));
 		bottom: rem(-96);
 	}
 }
