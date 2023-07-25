@@ -11,6 +11,7 @@ $common-margin: rem(16);
 	z-index: 1000;
 	height: rem(80);
 	background-color: rgba($green, 32%);
+	transition: all 0.3s ease-in-out;
 	@include mq(lg) {
 		height: rem(90);
 	}
@@ -54,12 +55,12 @@ $common-margin: rem(16);
 
 .header__nav {
 	position: fixed;
-	top: 0;
+	top: rem(80);
 	right: 0;
 	left: 0;
 	bottom: 0;
 	display: none;
-	padding: rem(92) rem(15) rem(40);
+	padding: rem(12) rem(15) rem(40);
 	overflow-y: auto;
 	background-color: $greenaccent;
 	color: $white;
@@ -187,4 +188,9 @@ $common-margin: rem(16);
 	@include mq(lg) {
 		width: 100%;
 	}
+}
+
+/* ドロワーメニュー展開時 */
+.is-drawerActive header {
+	background-color: $greenaccent;
 }
