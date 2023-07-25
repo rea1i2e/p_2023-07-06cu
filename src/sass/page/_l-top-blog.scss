@@ -1,0 +1,9 @@
+@use 'global' as *;
+@use 'sass:math';
+
+.l-top-blog {
+	margin-top: rem(76);
+	@include mq() {
+		margin-top: 0;
+	}
+}

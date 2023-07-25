@@ -1,0 +1,11 @@
+@use 'global' as *;
+@use 'sass:math';
+
+.l-top-mv {
+	height: 100vh;
+	min-height: rem(667);
+	@include mq() {
+		min-height: rem(768);
+	}
+}
+
