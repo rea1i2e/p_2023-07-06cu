@@ -35,7 +35,7 @@ jQuery(function ($) {
 	$("#js-menu").click(function () {
 		if ($(this).attr("aria-expanded") == "false") {
 			$("body").addClass("is-drawerActive");
-			$(this).attr("aria-expanded", true);
+			$(this).attr("aria-expanded", "true");
 			$("#js-drawer").attr("aria-hidden", "false");
 			$("#js-drawer").fadeIn();
 			$("html,body").css("overflow", "hidden");
@@ -49,24 +49,28 @@ jQuery(function ($) {
 	});
 	
 	$(window).resize(function () {
-		if ($(window).width() >= 1100) {
+		let window_width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+		if ( window_width >= 1100) {
 			$("body").removeClass("is-drawerActive");
+			$("#js-menu").attr("aria-expanded", "false");
+			$("#js-drawer").attr("aria-hidden", "true");
+			$("#js-drawer").fadeIn(); // メニューを表示
 			$("html,body").css("overflow", "initial"); // スクロールさせる
-			if ($("#js-menu").attr("aria-expanded") == "false") { // メニューボタンクリック前
-				$("#js-drawer").fadeIn(); // メニュー表示
-			}
 		} else {
 			if ($("#js-menu").attr("aria-expanded") == "false") { // メニューボタンクリック前
 				$("body").removeClass("is-drawerActive");
+				$("#js-drawer").attr("aria-hidden", "true");
 				$("#js-drawer").fadeOut();
 				$("html,body").css("overflow", "initial"); // スクロールさせる
 			} else {
+				$("#js-drawer").fadeIn();
+				$("#js-drawer").attr("aria-hidden", "false");
 				$("body").addClass("is-drawerActive");
 				$("html,body").css("overflow", "hidden"); // スクロールさせない
 			}
 		}
 	});
-
+	
 	/* ------------------------------
 ページトップへ戻るボタン
 ------------------------------ */
