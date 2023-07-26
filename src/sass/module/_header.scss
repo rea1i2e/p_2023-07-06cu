@@ -122,7 +122,7 @@ $common-margin: rem(16);
 	display: flex;
 	align-items: flex-start;
 	padding: 0 rem(12) rem(10);
-	padding: 0 rem(12);
+	padding: rem(12) 0;
 	@include mq(lg) {
 		position: relative;
 		flex-direction: column;

@@ -60,7 +60,7 @@ jQuery(function ($) {
 			if ($("#js-menu").attr("aria-expanded") == "false") { // メニューボタンクリック前
 				$("body").removeClass("is-drawerActive");
 				$("#js-drawer").attr("aria-hidden", "true");
-				$("#js-drawer").fadeOut();
+				$("#js-drawer").hide();
 				$("html,body").css("overflow", "initial"); // スクロールさせる
 			} else {
 				$("#js-drawer").fadeIn();
