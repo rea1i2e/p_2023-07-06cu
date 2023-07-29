@@ -23,9 +23,10 @@
 	display: none;
 	@include mq() {
 		width: min(vw-xl(194) ,rem(194));
+		width: rem(194);
 		display: block;
 		position: absolute;
-		right: calc(50% - min(vw-xl(638), rem(638)));
+		right: calc(50% - min(vw(768,360), rem(638)));
 		bottom: rem(-96);
 	}
 }
