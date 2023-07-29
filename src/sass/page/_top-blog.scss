@@ -32,8 +32,8 @@
 	display: none;
 	@include mq() {
 		position: absolute;
-		top: rem(-68);
-		left: calc(50% - min(vw-xl(620), rem(620)));
+		top: rem(24);
+		left: calc(50% - min(vw-md(354), rem(620)));
 		display: block;
 		width: min(vw-xl(437), rem(437));
 	}

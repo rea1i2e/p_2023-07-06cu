@@ -18,7 +18,7 @@
 	width: rem(109);
 	@include mq() {
 		top: rem(-42);
-		right: calc(50% - min(rem(670), vw-xl(670)));
+		right: calc(50% - min(vw-md(360), rem(670)));
 		width: min(rem(301), vw-xl(301));
 	}
 }

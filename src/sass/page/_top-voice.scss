@@ -17,8 +17,8 @@
 	display: none;
 	@include mq() {
 		position: absolute;
-		top: rem(-116);
-		left: calc(50% - min(rem(620), vw-xl(620)));
+		top: rem(-110);
+		left: calc(50% - min(vw-md(358), rem(620)));
 		display: block;
 		width: min(vw-xl(301), rem(301));
 	}
@@ -29,9 +29,9 @@
 	@include mq() {
 		position: absolute;
 		bottom: rem(-68);
-		right: calc(50% - min(rem(542), vw-xl(542)));
+		right: calc(50% - min(vw-md(358), rem(542)));
 		display: block;
-		width: min(rem(71),vw-xl(71));
+		width: rem(71);
 	}
 }
 

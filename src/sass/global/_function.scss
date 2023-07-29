@@ -18,6 +18,9 @@
 @function vw-xl($size) {
 	@return math.div($size, 1440) * 100vw;
 }
+@function vw-md($size) {
+	@return math.div($size, 768) * 100vw;
+}
 
 // remへの計算式（16pxを基準としている。10pxを基準とする場合は16を10に変更する）
 @function rem($pixels) {
