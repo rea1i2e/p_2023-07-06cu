@@ -44,10 +44,12 @@
 	margin-left: rem(8);
 	display: block;
 	width: rem(40);
-	height: rem(6);
+	// height: rem(6); rem単位だと画面幅を狭めたときに線が消える
+	height: 6px;
 	mask-image: url(../images/common/icon_arrow_right.svg);
 	mask-repeat: no-repeat;
-	mask-position: center;
+	// mask-position: center; 中央だと矢印の右側が見切れる
+	mask-position: right;
 	background-color: $white;
 	content: "";
 	transition: all 0.3s ease-in-out;
