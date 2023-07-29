@@ -22,10 +22,9 @@
 
 .top-campaign__swiper {
 	margin-left: rem(-12); /* スライド間隔分の余白打ち消し */
-	overflow: visible; /* 左側にズレたスライドをインナー幅で見切れさせない（代わりにセクションでoverflow: hidden; */
 	@include mq() {
+		margin-right: calc(50% - 50vw);
 		margin-left: rem(-20); /* スライド間隔分の余白打ち消し */
-
 	}
 
 }

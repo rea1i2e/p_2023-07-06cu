@@ -146,6 +146,10 @@ jQuery(function ($) {
   トップ キャンペーン スライダー
   ------------------------------ */
 	const campaignSwiper = new Swiper(".js-top-campaign-swiper", {
+		loop: true,
+		autoplay: {
+			delay: 4000,
+		},
 		slidesPerView: "auto",
 		breakpoints: {
 			768: {
