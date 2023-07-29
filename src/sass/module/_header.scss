@@ -12,7 +12,7 @@ $common-margin: rem(16);
 	height: rem(80);
 	background-color: rgba($green, 32%);
 	transition: all 0.3s ease-in-out;
-	@include mq(lg) {
+	@include mq() {
 		height: rem(90);
 	}
 }
@@ -21,7 +21,7 @@ $common-margin: rem(16);
 	display: flex;
 	max-width: initial;
 	height: inherit;
-	@include mq(lg) {
+	@include mq() {
 		max-width: initial;
 		padding: 0 rem(20) 0 rem(40);
 	}
@@ -32,7 +32,7 @@ $common-margin: rem(16);
 	z-index: 10;
 	width: rem(102);
 	height: inherit;
-	@include mq(lg) {
+	@include mq() {
 		width: rem(133);
 	}
 }
@@ -48,7 +48,7 @@ $common-margin: rem(16);
 	position: relative;
 	z-index: 10;
 	height: inherit;
-	@include mq(lg) {
+	@include mq() {
 		display: none;
 	}
 }
@@ -64,7 +64,7 @@ $common-margin: rem(16);
 	overflow-y: auto;
 	background-color: $greenaccent;
 	color: $white;
-	@include mq(lg) {
+	@include mq() {
 		margin-left: auto;
 		position: static;
 		overflow: initial;
@@ -85,7 +85,7 @@ $common-margin: rem(16);
 		max-width: rem(680);
 		column-count: 3;
 	}
-	@include mq(lg) {
+	@include mq() {
 		margin-bottom: 0;
 		display: flex;
 		max-width: initial;
@@ -96,7 +96,7 @@ $common-margin: rem(16);
 // Safariで2列目先頭にに余分な余白ができる。
 // .header__nav-item:nth-child(n+2) {
 .header__nav-item {
-	@include mq(lg) {
+	@include mq() {
 		margin-top: 0;
 	}
 }
@@ -110,7 +110,7 @@ $common-margin: rem(16);
 	font-size: rem(16);
 	font-weight: 700;
 	line-height: math.div(18, 16);
-	@include mq(lg) {
+	@include mq() {
 		margin-bottom: 0;
 		height: inherit;
 		font-size: rem(10);
@@ -123,12 +123,13 @@ $common-margin: rem(16);
 	align-items: flex-start;
 	padding: 0 rem(12) rem(10);
 	padding: rem(12) 0;
-	@include mq(lg) {
+	@include mq() {
 		position: relative;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		padding: 0 rem(19);
+		padding: 0 clamp(rem(5), -0.688rem + 2.08vw, rem(19));
 		height: inherit;
 		white-space: nowrap;
 	}
@@ -142,7 +143,7 @@ $common-margin: rem(16);
 	aspect-ratio: 1 / 1;
 	background: url(../images/common/icon_starfish.svg) no-repeat center / contain;
 	content: "";
-	@include mq(lg) {
+	@include mq() {
 		margin-right: 0;
 		margin-bottom: rem(4);
 		display: block;
@@ -156,7 +157,7 @@ $common-margin: rem(16);
 }
 
 .header__nav-item > a::after {
-	@include mq(lg) {
+	@include mq() {
 		position: relative;
 		bottom: rem(-4);
 		width: 0;
@@ -168,7 +169,7 @@ $common-margin: rem(16);
 }
 
 .header__nav-sub-items {
-	@include mq(lg) {
+	@include mq() {
 		display: none;
 	}
 }
@@ -185,7 +186,7 @@ $common-margin: rem(16);
 
 /* hover */
 .header__nav-item > a:hover::after {
-	@include mq(lg) {
+	@include mq() {
 		width: 100%;
 	}
 }

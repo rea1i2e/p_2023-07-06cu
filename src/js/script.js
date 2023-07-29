@@ -50,7 +50,7 @@ jQuery(function ($) {
 	
 	$(window).resize(function () {
 		let window_width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-		if ( window_width >= 1100) {
+		if ( window_width >= 768) {
 			$("body").removeClass("is-drawerActive");
 			$("#js-menu").attr("aria-expanded", "false");
 			$("#js-drawer").attr("aria-hidden", "true");
@@ -146,13 +146,9 @@ jQuery(function ($) {
   トップ キャンペーン スライダー
   ------------------------------ */
 	const campaignSwiper = new Swiper(".js-top-campaign-swiper", {
-		// slidesPerView: 1.26,
 		slidesPerView: "auto",
-		// spaceBetween: 24,
 		breakpoints: {
 			768: {
-				// spaceBetween: 40,
-				// slidesPerView: 3.48,
 				navigation: {
 					nextEl: ".swiper-button-next",
 					prevEl: ".swiper-button-prev",
